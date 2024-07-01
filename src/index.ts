@@ -1,7 +1,7 @@
  import express, { Application } from 'express';
 import sequelize from './config/database';
 import server from './apolloServer';
-import cors from 'cors';
+//import cors from 'cors';
 
 /*const corsOptions = {
     origin: ['http://localhost:3000'],

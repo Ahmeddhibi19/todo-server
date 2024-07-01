@@ -14,6 +14,7 @@ const schema = gql`
     description: String!
     status: String!
     dueDate: String!
+    startDate:String!
     projectId: ID!
     project: Project!
   }
@@ -23,6 +24,7 @@ const schema = gql`
     getProject(id: ID!): Project
     getTasks: [Task!]!
     getTask(id: ID!): Task
+    getTasksByProjectId(projectId: Int!): [Task]
   }
 
   input ProjectInput {
@@ -35,6 +37,7 @@ const schema = gql`
     description: String!
     status: String!
     dueDate: String!
+    startDate:String!
     projectId: ID!
   }
 

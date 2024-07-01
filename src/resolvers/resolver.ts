@@ -14,7 +14,10 @@ export const resolvers = {
       },
       getTask: async (_: any, { id }: { id: number }) => {
         return await Task.findByPk(id, { include: [Project] });
-      }
+      },
+      getTasksByProjectId: async (_: any, { projectId }: { projectId: number }) => {
+        return await Task.findAll({ where: { projectId } });
+      },
     },
     Mutation: {
       createProject: async (_: any, { input }: { input: any }) => {

@@ -33,6 +33,10 @@ Task.init({
     type: DataTypes.DATE,
     allowNull: false,
   },
+  startDate: {
+    type: DataTypes.DATE,
+    allowNull: false,
+  },
   projectId: {
     type: DataTypes.INTEGER.UNSIGNED,
     allowNull: false,
